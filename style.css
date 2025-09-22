@@ -1,0 +1,217 @@
+:root {
+  --color-header-text-hover:#007aff;
+  --color-hero-bg:#f5f7fb;
+  --color-hero-text:#6dfc56;
+  --color-banner-arrow:#8f96a3;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background-color 0.2s;
+  z-index: 10;
+}
+#header:hover {
+  background: white;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+#header .content-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 0.8rem;
+  font-weight: bold;
+}
+#header .content-wrap > ul > li > a,
+#header .content-wrap > div > button,
+#header .content-wrap > div > a {
+  transition: color 0.2s;
+}
+#header .content-wrap > ul > li > a:hover,
+#header .content-wrap > div > button:hover,
+#header .content-wrap > div > a:hover {
+  color: var(--color-header-text-hover);
+}
+#header .content-wrap > ul {
+  display: flex;
+  gap: 2.1rem;
+  margin-left: 3rem;
+  transform: translateY(-3px);
+}
+#header .content-wrap > ul > li > a {
+  font-size: 1rem;
+}
+#header .content-wrap > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transform: translateY(-3px);
+}
+#header .content-wrap > div > button {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  line-height: 20px;
+}
+#header .content-wrap > div > a {
+  padding-inline: 1.15rem;
+  border: 2px solid black;
+  border-radius: 50px;
+  line-height: 31px;
+  transition: color 0.2s, border-color 0.2s;
+}
+#header .content-wrap > div > a:hover {
+  border-color: var(--color-header-text-hover);
+}
+
+#hero .content-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#hero .content-wrap > video {
+  max-width: 1480px;
+  transform: translateX(-9rem);
+}
+#hero .content-wrap > div {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#hero .content-wrap > div > div {
+  display: flex;
+  flex-direction: column;
+}
+#hero .content-wrap > div > div > p {
+  display: flex;
+  justify-content: right;
+}
+#hero .content-wrap > div > div > p:first-child {
+  align-items: center;
+  gap: 0.1rem;
+  font-size: 1.1rem;
+  color: white;
+  transform: translateY(-5px);
+}
+#hero .content-wrap > div > div > p:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+#hero .content-wrap > div > div > p:nth-child(2) > strong {
+  color: var(--color-hero-text);
+  font-size: 2.7rem;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  transform: translateY(-7px);
+}
+#hero .content-wrap > div > div > p:nth-child(2) > span {
+  color: white;
+  font-size: 1.1rem;
+  transform: translateY(2px);
+}
+#hero .content-wrap > div > p {
+  display: flex;
+  justify-content: right;
+  gap: 0.2rem;
+  font-size: 0.85rem;
+  color: white;
+  opacity: 0.7;
+}
+
+#banner {
+  position: relative;
+  top: -70px;
+  overflow-x: hidden;
+}
+#banner .swiper-container {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+#banner .swiper-container:hover > .swiper-button-next,
+#banner .swiper-container:hover > .swiper-button-prev {
+  opacity: 1;
+}
+#banner .swiper-container > .swiper-wrapper > .swiper-slide > a {
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 420px;
+}
+#banner .swiper-container > .swiper-button-next,
+#banner .swiper-container > .swiper-button-prev {
+  top: 11.7rem;
+  --swiper-navigation-size:16px;
+  background: white;
+  padding: 1.9rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.1);
+  color: var(--color-banner-arrow);
+  transition: color 0.2s, opacity 0.2s;
+  opacity: 0;
+}
+#banner .swiper-container > .swiper-button-next::after,
+#banner .swiper-container > .swiper-button-prev::after {
+  font-weight: bold;
+}
+#banner .swiper-container > .swiper-button-next:hover,
+#banner .swiper-container > .swiper-button-prev:hover {
+  color: var(--color-header-text-hover);
+}
+#banner .swiper-container > .swiper-button-next {
+  right: -2rem;
+}
+#banner .swiper-container > .swiper-button-prev {
+  left: -2rem;
+}
+
+:root {
+  --layout-padding-inline:40px;
+  --container-width:1200px;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--layout-padding-inline) * 2);
+  margin: 0 auto;
+}
+.container > .layout {
+  width: calc(var(--container-width) + var(--layout-padding-inline) * 2);
+  padding-inline: var(--layout-padding-inline);
+}
+
+body {
+  height: 1000px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background: var(--color-hero-bg);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+button:hover {
+  cursor: pointer;
+}
