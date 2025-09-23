@@ -1,5 +1,7 @@
 export default function bannerSwiper() {
-    const swiper = new Swiper('.swiper-container', {
+    const swiperContainer = '.banner-swiper-container';
+
+    const swiper = new Swiper(swiperContainer, {
         slidesPerView:'auto',
         spaceBetween:60,
         autoplay: {
@@ -9,8 +11,17 @@ export default function bannerSwiper() {
         loop:true,
         centeredSlides:true,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
+            nextEl: `${swiperContainer} .swiper-button-next`,
+            prevEl: `${swiperContainer} .swiper-button-prev`
+        },
+        on: {
+            init: () => {
+                const duplicates = document.querySelectorAll(`${swiperContainer} .swiper-slide-duplicate`);
+                duplicates.forEach(item => {
+                    const focusables = item.querySelectorAll('a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])');
+                    focusables.forEach(el => el.setAttribute("tabindex", "-1"));
+                })
+            }
         }
     });
 
