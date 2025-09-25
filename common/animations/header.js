@@ -5,10 +5,10 @@ export default function Header() {
     const aTags = header.querySelectorAll(".navigator a");
     
     aTags.forEach(item => {
-        const pathname = new URL(item.href).pathname;
-        item.classList.toggle("select", window.location.pathname === pathname);
+        let href = new URL(item.href).pathname;
+        item.classList.toggle("select", window.location.pathname === href);
 
-        if(window.location.pathname === pathname) {
+        if(window.location.pathname === href) {
             item.setAttribute("aria-current", `${item.textContent}`);
         } else {
             if(!item.getAttribute("aria-current")) return;

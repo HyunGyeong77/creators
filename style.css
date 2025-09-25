@@ -12,6 +12,10 @@
   padding-inline: var(--layout-padding-inline);
 }
 
+.section {
+  padding-block: 8.5rem;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -59,7 +63,7 @@ button:hover {
   left: 0;
   width: 100%;
   transition: background-color 0.2s;
-  z-index: 10;
+  z-index: 100;
 }
 #header:hover, #header.active {
   background: white;
@@ -229,13 +233,13 @@ button:hover {
 
 #floating {
   position: sticky;
-  top: 3.2rem;
+  top: 4.5rem;
 }
 #floating > div {
   position: absolute;
-  top: 2rem;
+  top: 0.7rem;
   right: calc(41% - var(--container-width) / 2);
-  background-image: url("assets/images/floating.png");
+  background-image: url("assets/images/home/creators/floating.png");
   width: 128px;
   height: 10rem;
   display: flex;
@@ -267,21 +271,61 @@ button:hover {
 #creators > .container > .layout {
   position: relative;
 }
+#creators > .container > .layout .content-wrap {
+  margin-top: 1.2rem;
+  margin-bottom: 2.25rem;
+}
+#creators > .container > .layout .content-wrap > div {
+  display: flex;
+  justify-content: space-between;
+}
+#creators > .container > .layout .content-wrap > div > h2 > a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2.25rem;
+}
+#creators > .container > .layout .content-wrap > div > h2 > a > span {
+  display: inline-block;
+  background-image: url("assets/icons/more.svg");
+  width: 16px;
+  height: 30px;
+  transform: translateY(2px);
+}
+#creators > .container > .layout .content-wrap > div > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.99rem;
+  transform: translateY(1.9rem);
+  height: max-content;
+}
+#creators > .container > .layout .content-wrap > div > button:hover {
+  color: var(--color-creators-follow);
+}
+#creators > .container > .layout .content-wrap > div > button:hover > svg {
+  color: black;
+}
 #creators > .container > .layout .swiper-button-next,
 #creators > .container > .layout .swiper-button-prev {
-  top: 21.9rem;
+  top: 20.5rem;
   background: white;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
   box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.05);
-  padding-top: 0.1rem;
+  padding-top: 0.2rem;
 }
 #creators > .container > .layout .swiper-button-next::after,
 #creators > .container > .layout .swiper-button-prev::after {
   font-size: 0.8rem;
   font-weight: bold;
   color: var(--color-banner-arrow);
+  transition: color 0.2s;
+}
+#creators > .container > .layout .swiper-button-next:hover::after,
+#creators > .container > .layout .swiper-button-prev:hover::after {
+  color: var(--color-creators-follow);
 }
 #creators > .container > .layout .swiper-button-prev {
   left: 1.27rem;
@@ -289,41 +333,50 @@ button:hover {
 #creators > .container > .layout .swiper-button-next {
   right: 1.27rem;
 }
-#creators > .container > .layout > div {
+#creators > .container > .layout > div:last-child {
   width: 1200px;
-  padding: 0.1rem;
+  padding-inline: 0.1rem;
+  padding-block: 2rem;
   overflow: hidden;
 }
-#creators > .container > .layout > div .content-wrap {
-  margin-top: 1.4rem;
-  margin-bottom: 4rem;
-}
-#creators > .container > .layout > div .content-wrap > div {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide {
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
-#creators > .container > .layout > div .content-wrap > div > h2 > a {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > .youtube {
+  position: absolute;
+  top: 9.5rem;
   display: flex;
+  justify-content: center;
+  margin-block: 1.2rem;
+  border-radius: 50%;
+  z-index: 1;
+}
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > .youtube:hover > i::before {
+  background: #f7f8fd;
+}
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > .youtube > i {
+  position: relative;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 2.25rem;
+  background-image: url("assets/icons/youtube.svg");
+  width: 1.25rem;
+  height: 1.25rem;
+  background-size: contain;
 }
-#creators > .container > .layout > div .content-wrap > div > h2 > a > span {
-  display: inline-block;
-  background-image: url("assets/icons/more.svg");
-  width: 16px;
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > .youtube > i::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 30px;
   height: 30px;
-  transform: translateY(2px);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 50%;
+  z-index: -1;
 }
-#creators > .container > .layout > div .content-wrap > div > button {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-size: 0.99rem;
-  transform: translateY(1.7rem);
-  height: max-content;
-}
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button {
   position: relative;
   display: block;
   box-shadow: -2px 2px 5px 5px rgba(0, 0, 0, 0.01);
@@ -333,7 +386,7 @@ button:hover {
   padding-inline: 1.2rem;
   width: 100%;
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button::before {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -346,16 +399,17 @@ button:hover {
   opacity: 0;
   transition: opacity 0.2s;
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button:hover::before {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button:hover::before {
   opacity: 1;
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 3.7rem;
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:first-child {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:first-child {
   position: absolute;
   top: -2rem;
   bottom: 1.6rem;
@@ -368,64 +422,40 @@ button:hover {
   background: white;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.05);
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:first-child > img {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:first-child > img {
   width: 99px;
   height: 99px;
   border-radius: 50%;
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:last-child {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:last-child {
   margin-top: 5.6rem;
   text-align: center;
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:last-child b {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:last-child b {
   font-size: 1.1rem;
   font-weight: bold;
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:last-child span {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:last-child span {
   display: block;
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:last-child span:nth-child(2) {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:last-child span:nth-child(2) {
   font-size: 0.75rem;
   color: var(--color-creators-nickname);
   margin-block: 0.2rem;
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:last-child span:last-child {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:last-child span:last-child {
   font-size: 0.73rem;
   letter-spacing: -1px;
   color: var(--color-creators-nationality);
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:last-child span:last-child > svg {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:last-child span:last-child > svg {
   transform: translateY(2px);
   transition: color 0.2s;
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:last-child span:last-child > svg:hover {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .profile > span:last-child span:last-child > svg:hover {
   color: var(--color-creators-follow);
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .youtube {
-  display: flex;
-  justify-content: center;
-  margin-block: 1.2rem;
-}
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .youtube > i {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("assets/icons/youtube.svg");
-  width: 1.25rem;
-  height: 1.25rem;
-  background-size: contain;
-}
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .youtube > i::before {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.07);
-  border-radius: 50%;
-}
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .intro {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .intro {
   display: -webkit-box;
   line-clamp: 2;
   -webkit-line-clamp: 2;
@@ -437,56 +467,155 @@ button:hover {
   height: 40px;
   line-height: 22px;
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .activity {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .activity {
   display: block;
   text-align: left;
   margin-top: 1rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .activity > span:first-child {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .activity > span:first-child {
   display: block;
   font-size: 0.85rem;
   margin-bottom: 0.5rem;
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .activity > span:last-child {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .activity > span:last-child {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .activity > span:last-child > span {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .activity > span:last-child > span {
   display: flex;
   align-items: center;
   gap: 0.3rem;
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .activity > span:last-child > span:first-child {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .activity > span:last-child > span:first-child {
   color: var(--color-creators-p-trophy);
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .activity > span:last-child > span:last-child {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .activity > span:last-child > span:last-child {
   color: var(--color-creators-n-trophy);
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .activity > span:last-child > span > img {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .activity > span:last-child > span > img {
   width: 1.25rem;
   height: 1.5rem;
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .activity > span:last-child > span > span {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .activity > span:last-child > span > span {
   letter-spacing: -1px;
   font-size: 0.9rem;
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .follow {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .follow {
   display: flex;
   align-items: center;
   gap: 0.3rem;
   text-align: left;
-  padding-block: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1.3rem;
   font-size: 0.9rem;
   letter-spacing: -0.5px;
 }
-#creators > .container > .layout > div .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .follow > b {
+#creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .follow > b {
   color: var(--color-creators-follow);
+}
+
+#shortcut > .container > .layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#shortcut > .container > .layout > .title {
+  position: relative;
+}
+#shortcut > .container > .layout > .title > h2 {
+  font-size: 2.2rem;
+}
+#shortcut > .container > .layout > .title > .swiper-pagination {
+  display: flex;
+  justify-content: right;
+  bottom: 0;
+  height: 100%;
+}
+#shortcut > .container > .layout > .title > .swiper-pagination > .swiper-pagination-bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  background: none;
+  transform: translateY(1.2rem);
+}
+#shortcut > .container > .layout > .title > .swiper-pagination > .swiper-pagination-bullet:hover {
+  opacity: 1;
+}
+#shortcut > .container > .layout > .title > .swiper-pagination > .swiper-pagination-bullet:hover::before {
+  background: var(--color-creators-follow);
+  opacity: 1;
+}
+#shortcut > .container > .layout > .title > .swiper-pagination > .swiper-pagination-bullet::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: black;
+  opacity: 0.6;
+  border-radius: 50%;
+  transition: opacity 0.2s, background-color 0.2s;
+}
+#shortcut > .container > .layout > .title > .swiper-pagination > .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: none;
+  border-radius: unset;
+}
+#shortcut > .container > .layout > .title > .swiper-pagination > .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
+  width: 20px;
+  height: 20px;
+  background: none;
+  border-radius: unset;
+  background-image: url("assets/icons/home/shortcut/current-index.svg");
+  opacity: 1;
+  transition: none;
+}
+#shortcut > .container > .layout > .shortcut-swiper-container {
+  overflow: hidden;
+}
+#shortcut > .container > .layout > .shortcut-swiper-container > .swiper-wrapper > .swiper-slide > .grid-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.2rem;
+  row-gap: 1.5rem;
+}
+#shortcut > .container > .layout > .shortcut-swiper-container > .swiper-wrapper > .swiper-slide > .grid-box > div {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#shortcut > .container > .layout > .shortcut-swiper-container > .swiper-wrapper > .swiper-slide > .grid-box > div > div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(10px);
+  padding-inline: 2.5rem;
+  gap: 1.2rem;
+}
+#shortcut > .container > .layout > .shortcut-swiper-container > .swiper-wrapper > .swiper-slide > .grid-box > div > div > a {
+  color: white;
+}
+#shortcut > .container > .layout > .shortcut-swiper-container > .swiper-wrapper > .swiper-slide > .grid-box > div > div > a:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  width: max-content;
+}
+#shortcut > .container > .layout > .shortcut-swiper-container > .swiper-wrapper > .swiper-slide > .grid-box > div > div > a:last-child {
+  width: max-content;
+  padding-inline: 1rem;
+  padding-block: 0.6rem;
+  border-radius: 100px;
+  font-size: 0.76rem;
+  background: linear-gradient(to right, #0076ff, #119fff, #00c3a1, #00dc7a);
 }
 
 #contents {
   position: relative;
-  height: 2000px;
 }

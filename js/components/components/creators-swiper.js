@@ -1,10 +1,6 @@
 
 
 export default function creatorsSwiper() {
-    swiper();
-}
-
-function swiper() {
     const creators = '#creators';
 
     new Swiper('.creators-swiper-container', {

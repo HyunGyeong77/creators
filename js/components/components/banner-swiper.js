@@ -30,6 +30,17 @@ export default function bannerSwiper() {
     });
 
     swiper.el.addEventListener("mouseleave", function() {
+        const banner = document.getElementById("banner");
+        if(banner.className.includes("active")) {
+            const handleClick = () => {
+                swiper.autoplay.start();
+                document.removeEventListener("click", handleClick);
+            }
+
+            document.addEventListener("click", handleClick);
+            return;
+        }
+
         swiper.autoplay.start();
     })
 }

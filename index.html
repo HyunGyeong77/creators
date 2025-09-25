@@ -11,10 +11,12 @@
     <meta name="twitter:title" content="BGH 포트폴리오">
     <meta name="twitter:description" content="넥슨 크리에이터즈 클론 사이트">
     <title>Nexon Creators</title>
+    <base href="/creators/" />
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8.0.7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icons" href="favicon.ico" />
 </head>
 <body>
     <header id="header">
@@ -25,11 +27,11 @@
                         <img src="assets/images/creators-campaign-logo.png" alt="넥슨 크리에이터즈 홈페이지로 이동" />
                     </a>
                     <ul class="navigator">
-                        <li><a href="/">홈</a></li>
-                        <li><a href="/guide">넥슨 크리에이터즈란?</a></li>
-                        <li><a href="/creators">크리에이터즈</a></li>
-                        <li><a href="/campaign">캠페인</a></li>
-                        <li><a href="/center/notice">크리에이터즈 센터</a></li>
+                        <li><a href=".">홈</a></li>
+                        <li><a href="guide">넥슨 크리에이터즈란?</a></li>
+                        <li><a href="creators">크리에이터즈</a></li>
+                        <li><a href="campaign">캠페인</a></li>
+                        <li><a href="center/notice">크리에이터즈 센터</a></li>
                     </ul>
                     <div>
                         <button href="#">
@@ -77,27 +79,27 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <a href="#">
-                            <img src="assets/images/banner-hit2.png" alt="히트2 크리에이터즈 에셋 키트 지급 안내" width="1200" height="420" />
+                            <img src="assets/images/home/banner/banner-hit2.png" alt="히트2 크리에이터즈 에셋 키트 지급 안내" width="1200" height="420" />
                         </a>
                     </div>
                     <div class="swiper-slide">
                         <a href="#">
-                            <img src="assets/images/banner-creators.png" alt="크리에이터즈 신청하러 가기" width="1200" height="420" />
+                            <img src="assets/images/home/banner/banner-creators.png" alt="크리에이터즈 신청하러 가기" width="1200" height="420" />
                         </a>
                     </div>
                     <div class="swiper-slide">
                         <a href="#">
-                            <img src="assets/images/banner-hit2-2.png" alt="히트2 넥슨 크리에이터즈 확률형 콘텐츠 표기 안내" width="1200" height="420" />
+                            <img src="assets/images/home/banner/banner-hit2-2.png" alt="히트2 넥슨 크리에이터즈 확률형 콘텐츠 표기 안내" width="1200" height="420" />
                         </a>
                     </div>
                     <div class="swiper-slide">
                         <a href="#">
-                            <img src="assets/images/banner-creators-2.png" alt="peak 크리에이터에 지원하세요" width="1200" height="420" />
+                            <img src="assets/images/home/banner/banner-creators-2.png" alt="peak 크리에이터에 지원하세요" width="1200" height="420" />
                         </a>
                     </div>
                     <div class="swiper-slide">
                         <a href="#">
-                            <img src="assets/images/banner-thefirst.png" alt="퍼스트 디센던트 크리에이터즈 신청 안내" width="1200" height="420" />
+                            <img src="assets/images/home/banner/banner-thefirst.png" alt="퍼스트 디센던트 크리에이터즈 신청 안내" width="1200" height="420" />
                         </a>
                     </div>
                 </div>
@@ -116,25 +118,28 @@
             <section id="creators">
                 <div class="container">
                     <div class="layout">
+                        <div class="content-wrap">
+                            <div>
+                                <h2><a href="#">넥슨 크리에이터즈 둘러보기<span></span></a></h2>
+                                <button type="button">
+                                    서포터/팔로워 순 
+                                    <svg role="img" width="20" height="20" class="text-Icon-Primary rotate-0 flex-none transition-all transition-transform" data-sentry-element="svg" data-sentry-component="CustomIcon" data-sentry-source-file="index.tsx"><use href="assets/icons/sprite-5CcQ9esa.svg#sorting"></use></svg>
+                                </button>
+                            </div>
+                        </div>
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                         <div>
-                            <div class="content-wrap">
-                                <div>
-                                    <h2><a href="#">넥슨 크리에이터즈 둘러보기<span></span></a></h2>
-                                    <button type="button">
-                                        서포터/팔로워 순 
-                                        <svg role="img" width="20" height="20" class="text-Icon-Primary rotate-0 flex-none transition-all transition-transform" data-sentry-element="svg" data-sentry-component="CustomIcon" data-sentry-source-file="index.tsx"><use href="assets/icons/sprite-5CcQ9esa.svg#sorting"></use></svg>
-                                    </button>
-                                </div>
-                            </div>
                             <div class="creators-swiper-container">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
+                                        <a href="#" class="youtube">
+                                            <i role="img" aria-label="youtube 이미지"></i>
+                                        </a>
                                         <button type="button">
                                             <span class="profile">
                                                 <span>
-                                                    <img src="assets/images/zerometer.jpg" alt="영미터 프로필" />
+                                                    <img src="assets/images/home/creators/zerometer.jpg" alt="영미터 프로필" />
                                                 </span>
                                                 <span>
                                                     <b>영미터</b>
@@ -150,11 +155,11 @@
                                                 <span>활동 현황</span>
                                                 <span>
                                                     <span>
-                                                        <img src="assets/images/p-trophy.png" alt="FC 모바일" />
+                                                        <img src="assets/images/home/creators/p-trophy.png" alt="FC 모바일" />
                                                         <span>FC 모바일</span>
                                                     </span>
                                                     <span>
-                                                        <img src="assets/images/n-trophy.png" alt="NEXON CREATORS" />
+                                                        <img src="assets/images/home/creators/n-trophy.png" alt="NEXON CREATORS" />
                                                         <span>NEXON CREATORS</span>
                                                     </span>
                                                 </span>
@@ -163,10 +168,13 @@
                                         </button>
                                     </div>
                                     <div class="swiper-slide">
+                                        <a href="#" class="youtube">
+                                            <i role="img" aria-label="youtube 이미지"></i>
+                                        </a>
                                         <button type="button">
                                             <span class="profile">
                                                 <span>
-                                                    <img src="assets/images/wonsang.jpg" alt="이원상 프로필" />
+                                                    <img src="assets/images/home/creators/wonsang.jpg" alt="이원상 프로필" />
                                                 </span>
                                                 <span>
                                                     <b>이원상</b>
@@ -174,19 +182,16 @@
                                                     <span><svg role="img" width="14" height="14" class="text-Icon-Tertiary group-hover:text-Icon-Primary_Blue hover:text-Icon-Primary_Blue flex-none transition-all" data-sentry-element="svg" data-sentry-component="VariantIcon" data-sentry-source-file="index.tsx"><use href="assets/icons/sprite-5CcQ9esa.svg#language"></use></svg>KOREA</span>
                                                 </span>
                                             </span>
-                                            <span class="youtube">
-                                                <i role="img" aria-label="youtube 이미지"></i>
-                                            </span>
                                             <span class="intro">안녕하세요! 도와주시는만큼 꼭 다 보답하겠습니다!</span>
                                             <span class="activity">
                                                 <span>활동 현황</span>
                                                 <span>
                                                     <span>
-                                                        <img src="assets/images/p-trophy.png" alt="FC 모바일" />
+                                                        <img src="assets/images/home/creators/p-trophy.png" alt="FC 모바일" />
                                                         <span>FC 모바일</span>
                                                     </span>
                                                     <span>
-                                                        <img src="assets/images/n-trophy.png" alt="NEXON CREATORS" />
+                                                        <img src="assets/images/home/creators/n-trophy.png" alt="NEXON CREATORS" />
                                                         <span>NEXON CREATORS</span>
                                                     </span>
                                                 </span>
@@ -195,10 +200,13 @@
                                         </button>
                                     </div>
                                     <div class="swiper-slide">
+                                        <a href="#" class="youtube">
+                                            <i role="img" aria-label="youtube 이미지"></i>
+                                        </a>
                                         <button type="button">
                                             <span class="profile">
                                                 <span>
-                                                    <img src="assets/images/chicken-jeans.jpg" alt="닭진스 프로필" />
+                                                    <img src="assets/images/home/creators/chicken-jeans.jpg" alt="닭진스 프로필" />
                                                 </span>
                                                 <span>
                                                     <b>닭진스</b>
@@ -206,19 +214,16 @@
                                                     <span><svg role="img" width="14" height="14" class="text-Icon-Tertiary group-hover:text-Icon-Primary_Blue hover:text-Icon-Primary_Blue flex-none transition-all" data-sentry-element="svg" data-sentry-component="VariantIcon" data-sentry-source-file="index.tsx"><use href="assets/icons/sprite-5CcQ9esa.svg#language"></use></svg>KOREA</span>
                                                 </span>
                                             </span>
-                                            <span class="youtube">
-                                                <i role="img" aria-label="youtube 이미지"></i>
-                                            </span>
                                             <span class="intro">FC모바일 유튜버 닭진스입니다!</span>
                                             <span class="activity">
                                                 <span>활동 현황</span>
                                                 <span>
                                                     <span>
-                                                        <img src="assets/images/p-trophy.png" alt="FC 모바일" />
+                                                        <img src="assets/images/home/creators/p-trophy.png" alt="FC 모바일" />
                                                         <span>FC 모바일</span>
                                                     </span>
                                                     <span>
-                                                        <img src="assets/images/n-trophy.png" alt="NEXON CREATORS" />
+                                                        <img src="assets/images/home/creators/n-trophy.png" alt="NEXON CREATORS" />
                                                         <span>NEXON CREATORS</span>
                                                     </span>
                                                 </span>
@@ -227,10 +232,13 @@
                                         </button>
                                     </div>
                                     <div class="swiper-slide">
+                                        <a href="#" class="youtube">
+                                            <i role="img" aria-label="youtube 이미지"></i>
+                                        </a>
                                         <button type="button">
                                             <span class="profile">
                                                 <span>
-                                                    <img src="assets/images/soda.jpg" alt="soda 프로필" />
+                                                    <img src="assets/images/home/creators/soda.jpg" alt="soda 프로필" />
                                                 </span>
                                                 <span>
                                                     <b>SODA님</b>
@@ -238,25 +246,158 @@
                                                     <span><svg role="img" width="14" height="14" class="text-Icon-Tertiary group-hover:text-Icon-Primary_Blue hover:text-Icon-Primary_Blue flex-none transition-all" data-sentry-element="svg" data-sentry-component="VariantIcon" data-sentry-source-file="index.tsx"><use href="assets/icons/sprite-5CcQ9esa.svg#language"></use></svg>KOREA</span>
                                                 </span>
                                             </span>
-                                            <span class="youtube">
-                                                <i role="img" aria-label="youtube 이미지"></i>
-                                            </span>
                                             <span class="intro">샷또 베이비~!</span>
                                             <span class="activity">
                                                 <span>활동 현황</span>
                                                 <span>
                                                     <span>
-                                                        <img src="assets/images/p-trophy.png" alt="FC 모바일" />
+                                                        <img src="assets/images/home/creators/p-trophy.png" alt="FC 모바일" />
                                                         <span>FC 모바일</span>
                                                     </span>
                                                     <span>
-                                                        <img src="assets/images/n-trophy.png" alt="NEXON CREATORS" />
+                                                        <img src="assets/images/home/creators/n-trophy.png" alt="NEXON CREATORS" />
                                                         <span>NEXON CREATORS</span>
                                                     </span>
                                                 </span>
                                             </span>
                                             <span class="follow">서포터/팔로워 수<b>3,167</b></span>
                                         </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="shortcut" class="section">
+                <div class="container">
+                    <div class="layout">
+                        <div class="title">
+                            <h2>게임 바로가기</h2>
+                            <div class="swiper-pagination"></div> 
+                        </div>
+                        <div class="shortcut-swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="grid-box">
+                                        <div>
+                                            <img src="assets/images/home/shortcut/mabinogi-mobile.png" alt="마비노기 모바일 이미지" width="590" height="208">
+                                            <div>
+                                                <a href="#">
+                                                    마비노기 모바일
+                                                    <svg role="img" width="24" height="24" class="text-Icon-Primary_Inverse flex-none transition-all" data-sentry-element="svg" data-sentry-component="CustomIcon" data-sentry-source-file="index.tsx"><use href="assets/icons/sprite-5CcQ9esa.svg#open-in-new"></use></svg>
+                                                </a>
+                                                <a href="#">크리에이터즈 신청</a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="assets/images/home/shortcut/tales-weaver.png" alt="테일즈위버 이미지" width="590" height="208">
+                                            <div>
+                                                <a href="#">
+                                                    테일즈위버
+                                                    <svg role="img" width="24" height="24" class="text-Icon-Primary_Inverse flex-none transition-all" data-sentry-element="svg" data-sentry-component="CustomIcon" data-sentry-source-file="index.tsx"><use href="assets/icons/sprite-5CcQ9esa.svg#open-in-new"></use></svg>
+                                                </a>
+                                                <a href="#">크리에이터즈 신청</a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="assets/images/home/shortcut/sudden-attack.png" alt="서든어택 이미지" width="590" height="208">
+                                            <div>
+                                                <a href="#">
+                                                    서든어택
+                                                    <svg role="img" width="24" height="24" class="text-Icon-Primary_Inverse flex-none transition-all" data-sentry-element="svg" data-sentry-component="CustomIcon" data-sentry-source-file="index.tsx"><use href="assets/icons/sprite-5CcQ9esa.svg#open-in-new"></use></svg>
+                                                </a>
+                                                <a href="#">크리에이터즈 신청</a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="assets/images/home/shortcut/counter-strike.png" alt="카운터-스트라이크 온라인 이미지" width="590" height="208">
+                                            <div>
+                                                <a href="#">
+                                                    카운터-스트라이크 온라인
+                                                    <svg role="img" width="24" height="24" class="text-Icon-Primary_Inverse flex-none transition-all" data-sentry-element="svg" data-sentry-component="CustomIcon" data-sentry-source-file="index.tsx"><use href="assets/icons/sprite-5CcQ9esa.svg#open-in-new"></use></svg>
+                                                </a>
+                                                <a href="#">크리에이터즈 신청</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="grid-box">
+                                        <div>
+                                            <img src="assets/images/home/shortcut/wars-of-prasia.png" alt="프라시아 전기 이미지" width="590" height="208">
+                                            <div>
+                                                <a href="#">
+                                                    프라시아 전기
+                                                    <svg role="img" width="24" height="24" class="text-Icon-Primary_Inverse flex-none transition-all" data-sentry-element="svg" data-sentry-component="CustomIcon" data-sentry-source-file="index.tsx"><use href="assets/icons/sprite-5CcQ9esa.svg#open-in-new"></use></svg>
+                                                </a>
+                                                <a href="#">크리에이터즈 신청</a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="assets/images/home/shortcut/hit2.png" alt="hit2 이미지" width="590" height="208">
+                                            <div>
+                                                <a href="#">
+                                                    HIT2
+                                                    <svg role="img" width="24" height="24" class="text-Icon-Primary_Inverse flex-none transition-all" data-sentry-element="svg" data-sentry-component="CustomIcon" data-sentry-source-file="index.tsx"><use href="assets/icons/sprite-5CcQ9esa.svg#open-in-new"></use></svg>
+                                                </a>
+                                                <a href="#">크리에이터즈 신청</a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="assets/images/home/shortcut/fc-online.png" alt="fc 온라인 이미지" width="590" height="208">
+                                            <div>
+                                                <a href="#">
+                                                    FC 온라인
+                                                    <svg role="img" width="24" height="24" class="text-Icon-Primary_Inverse flex-none transition-all" data-sentry-element="svg" data-sentry-component="CustomIcon" data-sentry-source-file="index.tsx"><use href="assets/icons/sprite-5CcQ9esa.svg#open-in-new"></use></svg>
+                                                </a>
+                                                <a href="#">크리에이터즈 신청</a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="assets/images/home/shortcut/elsword.png" alt="엘소드 이미지" width="590" height="208">
+                                            <div>
+                                                <a href="#">
+                                                    엘소드
+                                                    <svg role="img" width="24" height="24" class="text-Icon-Primary_Inverse flex-none transition-all" data-sentry-element="svg" data-sentry-component="CustomIcon" data-sentry-source-file="index.tsx"><use href="assets/icons/sprite-5CcQ9esa.svg#open-in-new"></use></svg>
+                                                </a>
+                                                <a href="#">크리에이터즈 신청</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="grid-box">
+                                        <div>
+                                            <img src="assets/images/home/shortcut/fc-mobile.png" alt="fc 모바일 이미지" width="590" height="208">
+                                            <div>
+                                                <a href="#">
+                                                    FC 모바일
+                                                    <svg role="img" width="24" height="24" class="text-Icon-Primary_Inverse flex-none transition-all" data-sentry-element="svg" data-sentry-component="CustomIcon" data-sentry-source-file="index.tsx"><use href="assets/icons/sprite-5CcQ9esa.svg#open-in-new"></use></svg>
+                                                </a>
+                                                <a href="#">크리에이터즈 신청</a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="assets/images/home/shortcut/mabinogi.png" alt="마비노기 이미지" width="590" height="208">
+                                            <div>
+                                                <a href="#">
+                                                    마비노기
+                                                    <svg role="img" width="24" height="24" class="text-Icon-Primary_Inverse flex-none transition-all" data-sentry-element="svg" data-sentry-component="CustomIcon" data-sentry-source-file="index.tsx"><use href="assets/icons/sprite-5CcQ9esa.svg#open-in-new"></use></svg>
+                                                </a>
+                                                <a href="#">크리에이터즈 신청</a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="assets/images/home/shortcut/the-first-descendant.png" alt="the first descendant 이미지" width="590" height="208">
+                                            <div>
+                                                <a href="#">
+                                                    THE FIRST DESCENDANT
+                                                    <svg role="img" width="24" height="24" class="text-Icon-Primary_Inverse flex-none transition-all" data-sentry-element="svg" data-sentry-component="CustomIcon" data-sentry-source-file="index.tsx"><use href="assets/icons/sprite-5CcQ9esa.svg#open-in-new"></use></svg>
+                                                </a>
+                                                <a href="#">크리에이터즈 신청</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
