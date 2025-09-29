@@ -1,9 +1,4 @@
 export default function hero() {
-    counting();
-    currentDate();
-}
-
-function counting() {
     document.addEventListener("DOMContentLoaded", () => {
         anime({
             targets:"#hero-count",
@@ -16,12 +11,5 @@ function counting() {
                 heroCount.innerText = Number(heroCount.innerText).toLocaleString();
             }
         })
-    });
-}
-
-function currentDate() {
-    const heroDate = document.getElementById("hero-date");
-    const date = new Date();
-    const curDate = `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, '0')}.${date.getDate()}`;
-    heroDate.innerText = curDate;
+    });   
 }
