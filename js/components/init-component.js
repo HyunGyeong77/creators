@@ -4,6 +4,7 @@ import creatorsSwiper from "./components/creators-swiper.js";
 import shortcutSwiper from "./components/shortcut-swiper.js";
 import campaignSwiper from "./components/campaign-swiper.js";
 import campaignAround from './components/campaign-around.js';
+import creatorsRanking from './components/creators-ranking.js';
 
 hero();
 bannerSwiper();
@@ -11,3 +12,4 @@ creatorsSwiper();
 shortcutSwiper();
 campaignSwiper();
 campaignAround();
+creatorsRanking();
