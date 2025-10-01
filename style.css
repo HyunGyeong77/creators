@@ -191,6 +191,7 @@ button:hover {
   position: relative;
   top: -70px;
   overflow-x: hidden;
+  padding-inline: 40px;
 }
 #banner.active > .banner-swiper-container > .swiper-button-next,
 #banner.active > .banner-swiper-container > .swiper-button-prev {
@@ -504,6 +505,7 @@ button:hover {
   padding-bottom: 0.5rem;
   z-index: 1;
   mask-image: linear-gradient(to bottom, #fff 60%, rgba(255, 255, 255, 0.1));
+  -webkit-mask-image: linear-gradient(to bottom, #fff 60%, rgba(255, 255, 255, 0.1));
 }
 #creators > .container > .layout > div:last-child .creators-swiper-container > .swiper-wrapper > .swiper-slide > button > .activity > span:last-child:hover {
   overflow: auto;
