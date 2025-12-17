@@ -24,4 +24,4 @@
 
 ## 🖥️ 화면 구성
 ### [메인 페이지]
-![메인 페이지](assets/images/readme/creators.png)
+![메인 페이지](https://hyungyeong77.github.io/creators/assets/images/readme/creators.png)
