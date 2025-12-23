@@ -22,6 +22,10 @@
   box-sizing: border-box;
 }
 
+body {
+  min-width: 1480px;
+}
+
 main {
   background: var(--color-hero-bg);
 }
